@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="soporte.pac.controller.ConfiguracionController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="General ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="22.0" layoutY="21.0" prefHeight="246.0" prefWidth="554.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="115.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="414.0" minWidth="10.0" prefWidth="378.0" />
+                              <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="51.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="29.0" prefWidth="125.0" text="Ruta Imagen Fondo" GridPane.rowIndex="1" />
+                              <Label prefHeight="31.0" prefWidth="118.0" text="Ruta Configuracion" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtRutaFondo" promptText="Ruta imagen de fondo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtRutaConfiguracion" promptText="Ruta archivo de configuracion" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onMouseEntered="#cursorMano" onMouseExited="#cursorNormal" prefHeight="25.0" prefWidth="39.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onMouseEntered="#cursorMano" onMouseExited="#cursorNormal" prefHeight="25.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Global Web ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="244.0" layoutY="14.0" />
+                        <VBox layoutX="14.0" layoutY="14.0" prefHeight="231.0" prefWidth="435.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/GlobalWeb.png" />
+                                 </image>
+                              </ImageView>
+                              <GridPane prefHeight="101.0" prefWidth="407.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="154.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="452.0" minWidth="10.0" prefWidth="324.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="32.0" prefWidth="148.0" text="Usuario" GridPane.rowIndex="1" />
+                                    <Label prefHeight="32.0" prefWidth="148.0" text="Contraseña" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtUsuarioGwb" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <PasswordField fx:id="txtClaveGwb" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Salud Web ">
+            <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="244.0" layoutY="14.0" />
+                        <VBox layoutX="14.0" layoutY="14.0" prefHeight="231.0" prefWidth="435.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/SaludWeb.png" />
+                                 </image>
+                              </ImageView>
+                              <GridPane prefHeight="101.0" prefWidth="407.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="154.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="452.0" minWidth="10.0" prefWidth="324.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="32.0" prefWidth="148.0" text="Usuario" GridPane.rowIndex="1" />
+                                    <Label prefHeight="32.0" prefWidth="148.0" text="Contraseña" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtUsuarioSlw" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <PasswordField fx:id="txtClaveSlw" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children>
+               </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ButtonBar prefHeight="42.0" prefWidth="601.0" HBox.hgrow="ALWAYS">
+              <buttons>
+                <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" onMouseEntered="#cursorMano" onMouseExited="#cursorNormal" text="Aceptar" />
+                  <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#regresarMenu" onMouseEntered="#cursorMano" onMouseExited="#cursorNormal" text="Cancelar" />
+              </buttons>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </ButtonBar>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
